@@ -8,13 +8,23 @@ Sample output:
 Ratings as of 11-07-2020
 
 Adam            82453           964
+
 Betsy           91988           EXPIRED
+
 Charles         74699           976
+
 Denise          16027           983
+
 Eric            79228           1008
+
 Flora           77244           936
+
 Greg            48559           1001
+
 Hilda           73385           EXPIRED
+
 Ivan            109496          1000
+
 :
+
 etc.
