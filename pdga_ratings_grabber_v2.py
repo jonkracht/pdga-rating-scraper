@@ -1,5 +1,5 @@
 def get_player_info():
-    '''Return a dictionary whose key/value pairs are player name/player number.'''
+    '''Create a dictionary whose key/value pairs are player name/player number.'''
 
     player_info = {'Blake Atkinson': 82453,
                    'Mike Berg': 91988, 'Kyle Bottmeyer': 74699, 'Steve Braud': 16027, 'Dan Brooks-Wells': 79228,
@@ -26,7 +26,7 @@ def get_player_info():
 
 
 def get_player_rating(url):
-    '''Function to return player rating scraped from PDGA website.'''
+    '''Function to return player rating obtained from PDGA website (www.pdga.com).'''
 
     import requests
     from bs4 import BeautifulSoup
@@ -34,6 +34,7 @@ def get_player_rating(url):
     r = requests.get(url)  # pull html from website
     soup = BeautifulSoup(r.text, 'html.parser')  # format html
 
+    # Handle inactive accounts
     try:
         rating = soup.find(class_='current-rating').get_text().split()[2]
     except:
@@ -43,10 +44,10 @@ def get_player_rating(url):
 
 
 def print_info(info):
-    '''Function to print a nested dictionary'''
+    '''Function to print a nested dictionary.'''
 
     print('\n')
-    print(f"{'Name':<25} {'PDGA #':<15} {'Rating'}")
+    print(f"{'Name':<25} {'PDGA #':<15} {'Rating'}")  # print header row
 
     for key, vals in info.items():
         print(f"{key:<25} {vals['PDGA']:<15} {vals['rating']}")
@@ -103,7 +104,7 @@ def main():
     if str(input('\nSave data to file?  (\'y\' for yes)  ')).upper() == 'Y':
         save_info(info)
 
-    print('Finished grabbin\'.  Bye!')
+    print('\nFinished grabbin\'.  Bye!')
     return None
 
 
