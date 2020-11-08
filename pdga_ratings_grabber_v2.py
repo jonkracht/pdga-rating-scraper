@@ -1,6 +1,3 @@
-import requests, datetime
-from bs4 import BeautifulSoup
-
 def get_player_info():
     '''Return a dictionary whose key/value pairs are player name/player number.'''
 
@@ -31,6 +28,9 @@ def get_player_info():
 def get_player_rating(url):
     '''Function to return player rating scraped from PDGA website.'''
 
+    import requests
+    from bs4 import BeautifulSoup
+
     r = requests.get(url)  # pull html from website
     soup = BeautifulSoup(r.text, 'html.parser')  # format html
 
@@ -57,6 +57,8 @@ def print_info(info):
 def save_info(info, basesavename='pdga_ratings_'):
     '''Function to save player information into a text file.'''
 
+    import datetime
+
     date = datetime.date.today().strftime('%m-%d-%Y')
 
     savename = basesavename + date + '.txt'
@@ -74,7 +76,9 @@ def save_info(info, basesavename='pdga_ratings_'):
     return None
 
 
-if __name__ == '__main__':
+def main():
+    '''Main function to scrape PDGA ratings.'''
+
     print('\nWelcome to the PDGA Ratings Grabber.')
 
     # For players of interest, assemble a dictionary of name and player number
@@ -89,7 +93,7 @@ if __name__ == '__main__':
 
         new_dict = {}
         new_dict['PDGA'] = number
-        new_dict['rating'] = get_player_rating(base_url+str(number))
+        new_dict['rating'] = get_player_rating(base_url + str(number))
 
         info[name] = new_dict
 
@@ -100,3 +104,8 @@ if __name__ == '__main__':
         save_info(info)
 
     print('Finished grabbin\'.  Bye!')
+    return None
+
+
+if __name__ == '__main__':
+    main()
