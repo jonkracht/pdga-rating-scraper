@@ -33,9 +33,6 @@ def get_player_info():
 def get_player_rating(url):
     '''Function to return player rating obtained from PDGA website (www.pdga.com).'''
 
-    #import requests
-    #from bs4 import BeautifulSoup
-
     r = requests.get(url)  # pull html from website
     soup = BeautifulSoup(r.text, 'html.parser')  # format html
 
