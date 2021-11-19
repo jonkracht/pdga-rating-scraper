@@ -1,6 +1,11 @@
+# Import scraping modules
+import requests
+from bs4 import BeautifulSoup
+
 def get_player_info():
     '''Create a dictionary whose key/value pairs are player name/player number.'''
-
+    
+    # Alphabetized for readability
     player_info = {'Blake Atkinson': 82453,
                    'Mike Berg': 91988, 'Kyle Bottmeyer': 74699, 'Steve Braud': 16027, 'Dan Brooks-Wells': 79228,
                    'Ryan Brown': 77244,
@@ -28,8 +33,8 @@ def get_player_info():
 def get_player_rating(url):
     '''Function to return player rating obtained from PDGA website (www.pdga.com).'''
 
-    import requests
-    from bs4 import BeautifulSoup
+    #import requests
+    #from bs4 import BeautifulSoup
 
     r = requests.get(url)  # pull html from website
     soup = BeautifulSoup(r.text, 'html.parser')  # format html
@@ -88,7 +93,7 @@ def main():
     base_url = 'https://www.pdga.com/player/'
 
     info = {}
-    print('\nScraping information for ...')
+    print('\nScraping information for ...')  # display scraping progress
     for name, number in player_info.items():
         print(name)
 
