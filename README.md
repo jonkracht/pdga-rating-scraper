@@ -10,6 +10,8 @@ The user must specify the players for whom ratings are to be obtained within the
 
 ## Sample output:
 
+Data saved in the form of a table with columns of player name, PDGA number, and player rating.  Players with an inactive PDGA membership and therefore no publicly-viewable player rating are assigned the rating of 'EXPIRED'.
+
 Ratings as of 11-07-2020
 
 Adam            82453           964  
@@ -22,4 +24,3 @@ Greg            48559           1001
 Hilda           73385           EXPIRED  
 Ivan            109496          871  
 
-(Players with an inactive PDGA membership and therefore no publicly-viewable player rating are assigned the rating of 'EXPIRED'.)
