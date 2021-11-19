@@ -6,10 +6,10 @@ A Python script to grab disc golfers' player ratings from pdga.com, the website 
 
 ## Use
 The user must specify the players for whom ratings are to be obtained within the "get_player_info" function.
-At present, the player name/player numbers pairs are hard-coded.
-Implementing other data entry methods should be straight-forward (ex. reading from a text file or csv).
-Data is obtained via scraping using the 'requests' and 'BeautifulSoup' modules and saved as a text file.
-Data is structured in the form of a table whose columns are player name, PDGA number, and player rating.
+At present, the player name/number pairs are hard-coded.
+Implementing another means of entering this information (text file, csv, etc.) should be straight-forward.
+The 'requests' and 'BeautifulSoup' modules are used for the web scraping.
+Data is saved to a text file and structured in the form of a table whose columns are player name, PDGA number, and player rating
 Players with an inactive PDGA membership and therefore no publicly-viewable player rating are assigned the rating of 'EXPIRED'.
 
 
