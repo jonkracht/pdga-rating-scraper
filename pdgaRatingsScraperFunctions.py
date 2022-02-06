@@ -24,7 +24,7 @@ def save_info(info_dict, input_file):
     date = datetime.date.today().strftime('%m-%d-%Y')
 
     # Use name of file containing player info and date to create new filename
-    default_name = input_file + '-' + date
+    default_name = input_file + '-ratings-' + date
 
     name = input(f'\nEnter file name or type \'ENTER\' to use the default (\'{default_name}.txt\'):\n> ')
 
