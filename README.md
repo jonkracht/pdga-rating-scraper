@@ -1,5 +1,5 @@
 
-A Python script to grab disc golfers' player ratings from pdga.com, the website of the Professional Disc Golf Association.
+A Python script to grab any number of disc golfers' player ratings from [pdga.com](https://www.pdga.com), the website of the Professional Disc Golf Association.
 
 
 ## Use
