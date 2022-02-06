@@ -11,7 +11,7 @@ def get_player_info():
                    'Ryan Brown': 77244,
                    'Mike Carman': 48559, 'Derek Cassel': 73385, 'Stephen Curry': 109496,
                    'Jamie Detwiler': 87677, 'HC Dewey': 62106, 'Andy DiFronzo': 31029, 'Mike Duerr': 95251,
-                   'Ray Ducoat': 56246,
+                   'Ray Ducoat': 56246, 'Dave Dunn': 88153
                    'Aaron Fahey': 44665, 'Mike Fonzo': 52199, 'Devin Frederick': 16287,
                    'Bradley Good': 81618, 'Rolph Graf': 55401,
                    'Hank Hendry': 49714, 'Bill Hettel': 54672, 'Elijah Hogan': 72527, 'Seth Hogan': 55386,
@@ -21,6 +21,7 @@ def get_player_info():
                    'Justin Madore': 17035, 'Tony Manfra': 99094, 'Kyle McClure': 68213, 'Joe Mela': 2607,
                    'Cooper Michael': 64617, 'Paul Miller': 68214,
                    'Sean Momtahen': 52541, 'Gabe Monck': 75822, 'Tim Moyer': 84632,
+                   'Bradley Oberholtzer': 125544,
                    'Justin Rosak': 98161, 'Cory Rowley': 97008,
                    'Mark Saraceno': 82817, 'Rick Sassaman': 50552, 'Scott Schultz': 56415, 'Adam Spier': 89785,
                    'Chris Villa': 58197,

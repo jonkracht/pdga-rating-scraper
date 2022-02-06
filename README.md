@@ -1,6 +1,4 @@
-# pdga_rating_scraper
 
-## Purpose
 A Python script to grab disc golfers' player ratings from pdga.com, the website of the Professional Disc Golf Association.
 
 
@@ -27,3 +25,6 @@ Greg            48559           1001
 Hilda           73385           EXPIRED  
 Ivan            109496          871  
 
+
+## Future work
+* Define players of interest by contents of a text file or .csv file, rather than hardcoded
