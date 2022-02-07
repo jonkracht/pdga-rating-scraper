@@ -13,6 +13,7 @@ def main():
     info = {}
     functs.print_banner('Scraping information for:')
     print('')
+
     for name, number in player_info.items():
         print(name)
 
@@ -31,6 +32,7 @@ def main():
         functs.save_info(info, input_file)
 
     functs.print_banner('Exiting PDGA Ratings Scraper.  Byeee.')
+
     return
 
 
