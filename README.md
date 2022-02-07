@@ -23,18 +23,26 @@ A text file in which each row is of the form:
 
 `[PLAYER_NAME]: [PDGA_NUMBER]`  
 
-The file must be located same file as the other scripts. 
-A sample input file is shown below and also included in this repo (`sample-players.txt`).  If desired, it may be altered to the players of interest.
-
+The file must be located same directory as the other scripts. 
+A sample input file is shown below and also included in the repo (`sample-players.txt`).  If desired, it may be tailored to the particular players of interest.
 
 ![input](./sample-players.png)
 
+Note, `[PLAYER_NAME]` is not required to match the name the PDGA associates with `[PDGA_NUMBER]` so a nickname may be used if desired.
+As an example, the official name of PDGA number 37817 is 'Eagle Wynne McMahon' rather than 'Eagle McMahon' as listed in the sample input file.
+
+
+
+
 
 #### Output
-A text file where each row has columns of player name, player PDGA numbers, and current playing rating.
-If the person of interest is not an active PDGA member (i.e. their registration has lapsed), a value of `EXPIRED` is assigned.
-An example of typical output is also included (`sample-players-ratings-02-06-2022.txt`) and also displayed below.
-The output file may be given an arbitrary name but a default name is generated for convenience.
+A text file where each row has columns of player name, PDGA number, and current playing rating.
+If the individual is not an active PDGA member (i.e. their yearly registration has lapsed), a value of `EXPIRED` is assigned.
+An example of typical output is also included in the repo (`sample-players-ratings-02-06-2022.txt`) and also displayed below.
 
 ![output](./sample-players-ratings-02-06-2022.png)
+
+The output file may be given an arbitrary name but a default name is generated for convenience.
+
+
 
