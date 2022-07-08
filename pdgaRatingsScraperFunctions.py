@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def print_banner(text, character='*', width=100, gap=3):
+def print_banner(text, character='*', width=80, gap=3):
     '''Standardized banner printing.'''
 
     leftFill = int((width - len(text) - 2 * gap)/2)

@@ -48,3 +48,6 @@ The output file may be given an arbitrary name but a default name is generated f
 
 A text file was selected for both easy viewing and importing into other software for subsequent analysis.
 
+
+#### TODO
+* Print list of available text files from which to read player names
