@@ -24,9 +24,9 @@ def save_info(info_dict, input_file):
     date = datetime.date.today().strftime('%m-%d-%Y')
 
     # Use name of file containing player info and date to create new filename
-    default_name = input_file + '-ratings-' + date
+    default_name = input_file[:-4] + '-ratings-' + date + '.txt'
 
-    name = input(f'\nEnter file name or type \'ENTER\' to use the default (\'{default_name}.txt\'):\n> ')
+    name = input(f'\nEnter file name or type \'ENTER\' to use the default (\'{default_name}\'):\n> ')
 
     if name == '':
         name = default_name
@@ -36,10 +36,10 @@ def save_info(info_dict, input_file):
     for keys, vals in info_dict.items():
         info += f"\n{keys:<25} {vals['PDGA']:<15} {vals['rating']}"
 
-    with open(name + '.txt', 'w') as open_file:
+    with open(name, 'w') as open_file:
         open_file.write(info)
 
-    print('\nData saved to \'' + name + '.txt\'')
+    print('\nData saved to \'' + name)
 
     return
 
@@ -83,9 +83,9 @@ def get_player_info():
     if filename == '':
         filename = defaultFile
 
-    print(f'\nUsing contents of \'{filename}.txt\'')
+    print(f'\nUsing contents of \'{filename}\'')
 
-    with open(filename + '.txt', 'r') as open_file:
+    with open(filename, 'r') as open_file:
         newList = open_file.read().split('\n')
 
     # Create dictionary
